@@ -11,8 +11,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# pytest cache
 .pytest_cache/
 
 # -----------------------------
@@ -24,15 +22,17 @@ __pycache__/
 *.onnx
 
 # -----------------------------
-# Data Files (large / generated)
+# Data Files (generated / heavy)
 # -----------------------------
 data/raw/
 data/processed/
 data/models/
+
+# Graph files (large, regenerated)
 data/graph/*.pkl
 data/graph/*.json
 
-# Satellite tiles or temporary image chunks
+# Satellite tiles / temp chunks
 data/tiles/
 
 # -----------------------------

@@ -8,7 +8,7 @@ class ObstacleEngine:
     Can be plugged directly into the rerouting engine.
     """
 
-    def __init__(self, land_mask=None, restricted_polygons=None, 
+    def __init__(self, land_mask=None, restricted_polygons=None,
                  ml_checker=obstacle_checker_ml):
         self.rules = ObstacleRules(
             land_mask=land_mask,
@@ -29,3 +29,10 @@ class ObstacleEngine:
 
         # ML detection
         return self.ml_checker(lat, lon)
+
+    # -------------------------------------------------------------
+    # NEW: Alias method so Navigator and reroute() can call uniformly
+    # -------------------------------------------------------------
+    def is_obstacle(self, lat, lon):
+        """Alias wrapper for obstacle_checker() for compatibility."""
+        return self.obstacle_checker(lat, lon)

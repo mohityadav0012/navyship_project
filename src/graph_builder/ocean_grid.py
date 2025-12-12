@@ -9,7 +9,9 @@ def load_nodes(path=NODES_FILE):
     with open(path, "r") as f:
         data = json.load(f)
     # return as dict id -> (lat, lon)
-    return {d["id"]: {"lat": d["lat"], "lon": d["lon"], "i": d.get("i"), "j": d.get("j")} for d in data}
+    return {d["id"]: {"lat": d["lat"], "lon": d["lon"], 
+                      "i": d.get("i"), "j": d.get("j")} for d in data}
+
 
 def load_graph_pickle(path=PICKLE_FILE):
     path = Path(path)

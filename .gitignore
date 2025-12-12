@@ -1,6 +1,44 @@
+# Virtual environment
 venv/
+.env/
+
+# Python cache
 __pycache__/
-*.pkl
-*.json
+*.pyc
+*.pyo
+*.pyd
+
+# Model checkpoints
+*.pth
+*.pt
+*.h5
+
+# Data files
+data/raw/
+data/processed/
+data/models/
+data/graph/*.pkl
+data/graph/*.json
+
+# Logs
 *.log
-.env
+logs/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Build / packaging
+dist/
+build/
+*.egg-info/
+
+# Temp files
+*.tmp
+*.bak

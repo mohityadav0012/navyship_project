@@ -1,5 +1,3 @@
-# src/pathfinding/utils.py
-
 from src.utils.utils import haversine_km
 
 

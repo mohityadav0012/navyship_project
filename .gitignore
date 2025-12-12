@@ -1,44 +1,75 @@
-# Virtual environment
+# -----------------------------
+# Virtual Environments
+# -----------------------------
 venv/
 .env/
 
-# Python cache
+# -----------------------------
+# Python Cache / Bytecode
+# -----------------------------
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Model checkpoints
+# pytest cache
+.pytest_cache/
+
+# -----------------------------
+# Model Checkpoints
+# -----------------------------
 *.pth
 *.pt
 *.h5
+*.onnx
 
-# Data files
+# -----------------------------
+# Data Files (large / generated)
+# -----------------------------
 data/raw/
 data/processed/
 data/models/
 data/graph/*.pkl
 data/graph/*.json
 
+# Satellite tiles or temporary image chunks
+data/tiles/
+
+# -----------------------------
 # Logs
+# -----------------------------
 *.log
 logs/
 
-# Notebooks checkpoints
+# -----------------------------
+# Notebooks
+# -----------------------------
 .ipynb_checkpoints/
 
-# OS-specific junk
+# -----------------------------
+# Editor / IDE
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# OS Junk
+# -----------------------------
 .DS_Store
 Thumbs.db
 
-# VS Code settings
-.vscode/
-
-# Build / packaging
+# -----------------------------
+# Build / Packaging
+# -----------------------------
 dist/
 build/
 *.egg-info/
+*.spec
 
-# Temp files
+# -----------------------------
+# Temporary / Backup Files
+# -----------------------------
 *.tmp
 *.bak
+*.swp
+*.swo

@@ -73,3 +73,22 @@ build/
 *.bak
 *.swp
 *.swo
+
+
+# -----------------------------
+# Frontend (Node / React)
+# -----------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+
+# npm / yarn logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------------------
+# Map tiles / cache (future)
+# -----------------------------
+*.mbtiles

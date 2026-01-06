@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Route Optimizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>NaviShip</h1>
+            <div class="tools">
+                <h3>Map Tools</h3>
+                <button class="tool-btn active" data-tool="land">Build Land</button>
+                <button class="tool-btn" data-tool="hazard">Build Hazard</button>
+                <button class="tool-btn" data-tool="eraser">Eraser</button>
+                <div class="divider"></div>
+                <h3>Route Points</h3>
+                <button class="tool-btn" data-tool="start">Set Start (Green)</button>
+                <button class="tool-btn" data-tool="end">Set End (Red)</button>
+            </div>
+
+            <div class="demos">
+                <h3>Load Demo</h3>
+                <select id="demoSelect">
+                    <option value="">Select a Map...</option>
+                </select>
+                <button id="loadDemoBtn" class="secondary-btn" style="margin-top: 5px; width: 100%;">Load</button>
+            </div>
+
+            <div class="actions">
+                <button id="calculateBtn" class="primary-btn">Calculate Routes</button>
+                <button id="clearBtn" class="secondary-btn">Clear Map</button>
+            </div>
+
+            <div class="legend">
+                <h3>Legend</h3>
+                <div class="item"><span class="color blue"></span> Fastest</div>
+                <div class="item"><span class="color green"></span> Fuel Efficient</div>
+                <div class="item"><span class="color orange"></span> Coastal</div>
+            </div>
+        </aside>
+
+        <main class="canvas-container">
+            <canvas id="mapCanvas" width="600" height="600"></canvas>
+            <div class="overlay-info">
+                <p>Drag to draw land. Click to place points.</p>
+                <p>Grid: 60x60</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
